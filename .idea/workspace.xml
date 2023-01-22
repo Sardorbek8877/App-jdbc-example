@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8e48667-0d7c-462b-adfc-0cfc69730c70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/DataBaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/DataBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/DataBaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/pdp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/pdp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674397385312</updated>
-      <workItem from="1674397387269" duration="10076000" />
+      <workItem from="1674397387269" duration="13626000" />
     </task>
     <servers />
   </component>

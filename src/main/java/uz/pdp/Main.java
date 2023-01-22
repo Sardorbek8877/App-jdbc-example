@@ -28,11 +28,23 @@ public class Main {
 
                     break;
                 case 2:
-                    System.out.println("Edit User");
+                    System.out.println("Enter user's id");
+                    int id=scanner.nextInt();
+                     scanner=new Scanner(System.in);
+                    System.out.println("Enter editing firstname");
+                    firstname = scanner.nextLine();
+                    System.out.println("Enter editing lastname");
+                    lastname = scanner.nextLine();
+                    System.out.println("Enter editing username");
+                    username = scanner.nextLine();
+                    System.out.println("Enter editing password");
+                    password = scanner.nextLine();
+                    user = new User(firstname, lastname, username, password);
+                    dataBaseService.editUser(user);
                     break;
                 case 3:
                     System.out.println("Enter user's id.");
-                    int id=scanner.nextInt();
+                    id=scanner.nextInt();
                     dataBaseService.deleteUser(id);
                     break;
                 case 4:

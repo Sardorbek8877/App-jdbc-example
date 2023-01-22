@@ -61,4 +61,36 @@ public class DataBaseService {
         }
 
     }
+
+    public void editUser(User user){
+        try {
+            Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
+            Statement statement = connection.createStatement();
+            String query = "update users set ";
+            if (!user.getFirstname().isEmpty()){
+                query += "firstname='" + user.getFirstname() + "',";
+            }
+            if (!user.getLastname().isEmpty()){
+                query += "lastname='" + user.getLastname() + "',";
+            }
+            if (!user.getUsername().isEmpty()){
+                query += "username='" + user.getUsername() + "',";
+            }
+            if (!user.getPassword().isEmpty()){
+                query += "password='" + user.getPassword() + "'";
+            }
+
+            if (!query.equals("update users set ")){
+                if (query.endsWith("',")) {
+                    query = query.substring(0, query.length() - 1);
+                }
+                query += " where id=" + user.getId();
+                statement.execute(query);
+                System.out.println("User edited");
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
