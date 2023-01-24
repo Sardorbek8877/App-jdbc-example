@@ -107,14 +107,6 @@ public class DataBaseService {
             preparedStatement.setString(4, user.getPassword());
             preparedStatement.executeUpdate();
             System.out.println("User added from prepared Statement");
-//            Statement statement = boglovchi.createStatement();
-//            String query = "Insert into users(firstname, lastname, username, password) " +
-//                    "values('" + user.getFirstname() + "','" + user.getLastname() +
-//                    "','" + user.getUsername() + "','" + user.getPassword() + "');";
-//
-//            statement.execute(query);
-//            System.out.println("User added.");
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -151,8 +143,6 @@ public class DataBaseService {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.executeUpdate();
             System.out.println("User deleted from Prepared Statement!");
-
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
