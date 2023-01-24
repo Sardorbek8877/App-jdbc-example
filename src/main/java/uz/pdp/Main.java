@@ -24,8 +24,8 @@ public class Main {
                     System.out.println("Enter password");
                     String password = scanner.nextLine();
                     User user = new User(firstname, lastname, username, password);
-                    dataBaseService.saveUser(user);
-
+//                    dataBaseService.saveUser(user);
+                    dataBaseService.saveUserPreparedStatement(user);
                     break;
                 case 2:
                     System.out.println("Enter user's id");
@@ -39,16 +39,17 @@ public class Main {
                     username = scanner.nextLine();
                     System.out.println("Enter editing password");
                     password = scanner.nextLine();
-                    user = new User(firstname, lastname, username, password);
-                    dataBaseService.editUser(user);
+                    user = new User(id, firstname, lastname, username, password);
+                    dataBaseService.editUserPreparedStatement(user);
                     break;
                 case 3:
                     System.out.println("Enter user's id.");
                     id=scanner.nextInt();
-                    dataBaseService.deleteUser(id);
+                    dataBaseService.deleteUserPreparedStatement(id);
                     break;
                 case 4:
-                    dataBaseService.getUsers();
+//                    dataBaseService.getUsers();
+                    dataBaseService.getUsersPreparedStatement();
                     break;
             }
         }
